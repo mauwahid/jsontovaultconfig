@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON to JSON Vault Converter</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            width: 90%; /* Menggunakan 90% dari lebar browser */
+            height: 90%; /* Menggunakan 90% dari tinggi browser */
+        }
+        .container div {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        textarea {
+            flex: 1;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        button {
+            align-self: center;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: auto; /* Align button to the center vertically */
+            margin-bottom: auto; /* Align button to the center vertically */
+        }
+        label {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <label for="inputJson">JSON</label>
+            <textarea id="inputJson"></textarea>
+        </div>
+        <button onclick="convertJson()">Convert</button>
+        <div>
+            <label for="outputJson">JSON Vault</label>
+            <textarea id="outputJson" readonly></textarea>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
